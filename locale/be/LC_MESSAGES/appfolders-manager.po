@@ -27,13 +27,13 @@ msgid "Add to"
 msgstr "Дабавіць у"
 
 msgid "New AppFolder"
-msgstr "Новая пака прыкладанняў"
+msgstr "Новая Папка Праграмаў"
 
 msgid "Remove from"
 msgstr "Выдалiць з"
 
 msgid "Delete AppFolder"
-msgstr "Выдалiць Папку прыкладанняў"
+msgstr "Выдалiць Папку Праграмаў"
 
 msgid "Modifications will be effective after reloading the extension."
 msgstr "Змены ўступяць у сілу пасля перазагрузкі пашырэння."
@@ -42,10 +42,16 @@ msgid "Maximum number of columns :"
 msgstr "Максiмальная колькасць слупкоў :"
 
 msgid "Delete all related settings when an appfolder is deleted"
-msgstr "Выдаляць усе звязаныя налады пры выдаленні Папки прыкладанняў."
+msgstr "Выдаляць усе звязаныя налады пры выдаленні Папцы Праграмаў."
 
 msgid "Delete"
 msgstr "Выдалiць"
 
 msgid "Rename"
 msgstr "Перайменаваць"
+
+msgid "This appfolder already exists."
+msgstr "Гэтая Папка Праграмаў ужо існуе"
+
+msgid "Create"
+msgstr "Стварыць"
