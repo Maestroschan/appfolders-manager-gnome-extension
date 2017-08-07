@@ -49,3 +49,9 @@ msgstr "Удалить"
 
 msgid "Rename"
 msgstr "Переименовать"
+
+msgid "This appfolder already exists."
+msgstr "Эта Папка Приложений уже существует"
+
+msgid "Create"
+msgstr "Создать"
