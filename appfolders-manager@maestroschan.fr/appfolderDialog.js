@@ -406,7 +406,7 @@ class SelectCategoryButton {
 		this.actor.connect('button-press-event', this._onButtonPress.bind(this));
 
 		this._menu = null;
-		this._menuManager = new PopupMenu.PopupMenuManager(this);
+		this._menuManager = new PopupMenu.PopupMenuManager(this.actor);
 	}
 
 	popupMenu () {
