@@ -541,6 +541,10 @@ class FolderArea extends DroppableArea {
 		if ((source instanceof AppDisplay.AppIcon) &&
 		                            !Extension.isInFolder(source.id, this.id)) {
 			Extension.addToFolder(source, this.id);
+			//redisplay
+			OVERLAY_MANAGER.computeFolderOverlayActors();
+			OVERLAY_MANAGER.updateState(false);
+			Main.overview.viewSelector.appDisplay._views[1].view._redisplay();
 			Main.overview.endItemDrag(this);
 			return true;
 		}
