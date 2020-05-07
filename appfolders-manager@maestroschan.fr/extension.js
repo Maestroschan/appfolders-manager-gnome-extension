@@ -99,7 +99,6 @@ function injectionInAppsMenus() {
 					mainAppView._currentPopup.popdown();
 				}
 				createNewFolder(this._source);
-				mainAppView._redisplay();
 				Mainloop.source_remove(a);
 			});
 		});
@@ -128,7 +127,6 @@ function injectionInAppsMenus() {
 							mainAppView._currentPopup.popdown();
 						}
 						addToFolder(this._source, _folder);
-						mainAppView._redisplay();
 						Mainloop.source_remove(a);
 					});
 				});
@@ -167,7 +165,6 @@ function injectionInAppsMenus() {
 							mainAppView._currentPopup.popdown();
 						}
 						removeFromFolder(appId, _folder);
-						mainAppView._redisplay();
 						Mainloop.source_remove(a);
 					});
 				});
