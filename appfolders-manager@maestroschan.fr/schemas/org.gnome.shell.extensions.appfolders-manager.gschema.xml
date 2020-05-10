@@ -21,5 +21,10 @@
       <summary>Show items in right-click menus</summary>
       <description>The legacy interface, with submenus in the right-click menu on application icons, can be shown in addition to the default drag-and-drop behavior.</description>
     </key>
+    <key type="b" name="non-duplicated-apps">
+      <default>true</default>
+      <summary>No identical app exists</summary>
+      <description>Remove app from its previous folder when drag it to another, include to create a new one.</description>
+    </key>
   </schema>
 </schemalist>

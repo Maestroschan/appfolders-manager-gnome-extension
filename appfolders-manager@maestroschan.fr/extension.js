@@ -372,6 +372,14 @@ function addToFolder (app_source, folder_id) {
 	content.push(id);
 	folder_schema.set_strv('apps', content); // XXX verbose errors
 	
+	//remove the app from its previous folder
+	if ( SETTINGS.get_boolean('non-duplicated-apps') ) {
+		if(DragAndDrop.OVERLAY_MANAGER.openedFolder!=null){
+			removeFromFolder(id, DragAndDrop.OVERLAY_MANAGER.openedFolder);
+			DragAndDrop.OVERLAY_MANAGER.updateState(false);
+		}
+	}
+
 	// update icons
 	repaintFolder();
 	return true;

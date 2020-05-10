@@ -47,11 +47,14 @@ const appfoldersManagerSettingsWidget = new GObject.Class({
 		let deleteAllBox = this.build_switch('total-deletion',
 		         _("Delete all related settings when an appfolder is deleted"));
 		let menusBox = this.build_switch('extend-menus',
-		       _("Use the right-click menus in addition to the drag-and-drop"));
+			   _("Use the right-click menus in addition to the drag-and-drop"));
+		let nonduplicatedBox = this.build_switch('non-duplicated-apps',
+		_("Remove app from its previous folder when drag it to another"));
 
 //		this.add_row(autoDeleteBox, generalSection);
 		this.add_row(deleteAllBox, generalSection);
 		this.add_row(menusBox, generalSection);
+		this.add_row(nonduplicatedBox, generalSection);
 
 		//----------------------------------------------------------------------
 
@@ -121,7 +124,6 @@ const appfoldersManagerSettingsWidget = new GObject.Class({
 			wrap: true,
 			visible: true,
 		});
-		
 		let rowSwitch = new Gtk.Switch({ valign: Gtk.Align.CENTER });
 		rowSwitch.set_state(this._settings.get_boolean(key));
 		rowSwitch.connect('notify::active', (widget) => {

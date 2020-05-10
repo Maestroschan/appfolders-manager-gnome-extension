@@ -17,6 +17,8 @@ const ShellEntry = imports.ui.shellEntry;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Extension = Me.imports.extension;
+const DragAndDrop = Me.imports.dragAndDrop;
+const Convenience = Me.imports.convenience;
 
 const Gettext = imports.gettext.domain('appfolders-manager');
 const _ = Gettext.gettext;
@@ -340,7 +342,11 @@ var AppfolderDialog = class AppfolderDialog {
 		this._applyCategories();
 		this._applyName();
 		this.destroy();
-		
+		if ( Convenience.getSettings('org.gnome.shell.extensions.appfolders-manager').get_boolean('non-duplicated-apps') ) {
+			if(DragAndDrop.OVERLAY_MANAGER.openedFolder!=null){
+				Extension.removeFromFolder(this._app, DragAndDrop.OVERLAY_MANAGER.openedFolder);
+			}
+		}
 		Main.overview.viewSelector.appDisplay._views[1].view._redisplay();
 		if (Extension.DEBUG) {
 			log('[AppfolderDialog v2] reload the view');
